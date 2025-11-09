@@ -1,0 +1,11 @@
+{
+  "name": "profiler",
+  "version": "1.0.0",
+  "description": "P∆ Profiler App",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Building web assets...'"
+  },
+  "author": "Pixvulian",
+  "license": "MIT"
+}
