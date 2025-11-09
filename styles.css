@@ -1,0 +1,45 @@
+*{box-sizing:border-box}
+:root{--bg:#000;--panel:#0b0b0b;--line:#222;--txt:#fff;--muted:#bdbdbd}
+html,body{height:100%}
+body{margin:0;background:#000;color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.top-spacer{height:10px}
+.page{padding:16px 14px 84px 14px}
+.logo-wrap{display:flex;justify-content:center;margin:10px 0 18px 0}
+.searchbar{display:flex;gap:10px;align-items:center;justify-content:center}
+.input{flex:1;max-width:760px;background:#0c0c0c;border:1px solid var(--line);border-radius:14px;color:#fff;padding:14px 16px;font-size:16px}
+.icon-btn{background:#0c0c0c;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.icon-btn img{width:22px;height:22px}
+.ghost{margin:12px auto 8px auto;display:flex;gap:8px;align-items:center;background:transparent;border:1px dashed var(--line);border-radius:12px;color:var(--muted);padding:10px 12px}
+.ghost img{width:18px;height:18px}
+.filters{display:grid;gap:10px;max-width:760px;margin:0 auto 10px auto}
+.filters .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.filters input,.filters select{background:#0c0c0c;border:1px solid var(--line);border-radius:12px;color:#fff;padding:12px 14px}
+.hidden{display:none}
+.summary{text-align:center;margin:10px 0 6px}
+.muted{color:var(--muted)}
+.results{max-width:760px;margin:0 auto}
+.card{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,#0b0b0b 0%,#090909 100%);padding:12px;margin:12px 0}
+.card .head{display:flex;gap:12px;align-items:center}
+.card .photo{width:64px;height:64px;object-fit:cover;border-radius:10px;border:1px solid var(--line);background:#111}
+.card .title{font-weight:800;font-size:16px}
+.card .meta{font-size:12px;color:#d0d0d0;line-height:1.35}
+.badge{margin-left:auto;border:1px solid var(--line);background:#0f0f0f;padding:6px 8px;border-radius:10px;font-size:12px;color:#cfcfcf}
+.links{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
+.link{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);padding:6px 8px;border-radius:10px;color:#cfcfcf;text-decoration:none}
+.link img{width:14px;height:14px}
+.bottom{position:fixed;left:0;right:0;bottom:0;height:60px;background:rgba(10,10,10,.92);backdrop-filter:blur(4px);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-around;padding-bottom:env(safe-area-inset-bottom)}
+.bottom button{display:flex;gap:8px;align-items:center;background:none;border:none;color:#ddd}
+.bottom img{width:20px;height:20px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:flex-end}
+.modal-card{position:relative;width:100%;background:#0b0b0b;border-top-left-radius:16px;border-top-right-radius:16px;border:1px solid var(--line);max-height:85vh;overflow:auto;padding:12px 12px 72px 12px}
+.close{position:absolute;right:12px;top:8px;background:#111;border:1px solid var(--line);color:#fff;border-radius:10px;padding:4px 10px;font-size:18px}
+.actions{display:flex;gap:8px;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.btn{border:1px solid var(--line);background:transparent;color:#fff;padding:8px 10px;border-radius:10px;font-size:12px}
+.analyze{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999}
+.scan{max-width:780px;width:92%;border:1px solid #111;border-radius:16px;padding:18px;background:linear-gradient(180deg,#0a0a0a,#000)}
+.scan-logo{text-align:center;letter-spacing:6px;margin-bottom:12px;color:#eaeaea}
+.scan-bars{height:120px;border:1px solid #111;background:#050505;overflow:hidden;position:relative}
+.scan-noise{height:120px;margin-top:10px;border:1px solid #111;background:#050505;overflow:hidden;position:relative}
+.noise-row{white-space:nowrap;font-family:ui-monospace,Menlo,Consolas,monospace;color:#e6e6e6;opacity:.85;font-size:12px}
+.clamp1{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:540px){ .filters .grid-2{grid-template-columns:1fr} .badge{display:none} }

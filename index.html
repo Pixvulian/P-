@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+  <title>P∆</title>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div id="app">
+    <header class="top-spacer"></header>
+
+    <!-- Главная страница -->
+    <main id="home" class="page">
+      <div class="logo-wrap"><img src="assets/logo.svg" alt="P∆"/></div>
+
+      <div class="searchbar">
+        <input id="q" class="input" placeholder="ФИО / ник / телефон / e-mail / ключевые слова"/>
+        <button id="btnSearch" class="icon-btn" title="Поиск"><img src="assets/search.svg" alt=""/></button>
+      </div>
+
+      <button id="btnFilters" class="ghost">
+        <img src="assets/filter.svg" alt=""/><span>фильтры</span>
+      </button>
+
+      <div id="filters" class="filters hidden">
+        <input id="fCity" placeholder="город"/>
+        <div class="grid-2">
+          <input id="fAgeFrom" type="number" placeholder="возраст от"/>
+          <input id="fAgeTo" type="number" placeholder="до"/>
+        </div>
+        <select id="fSex">
+          <option value="">пол: любой</option>
+          <option value="2">муж</option>
+          <option value="1">жен</option>
+        </select>
+        <input id="fWork" placeholder="работа / интересы / учёба"/>
+        <input id="fHandle" placeholder="ник / e-mail / телефон"/>
+        <input id="fTags" placeholder="теги (через запятую)"/>
+      </div>
+
+      <div id="summary" class="summary muted"></div>
+      <div id="results" class="results"></div>
+    </main>
+
+    <!-- Сохранённые -->
+    <section id="saved" class="page hidden">
+      <div class="section-title">Сохранённые</div>
+      <div id="savedList" class="results"></div>
+    </section>
+
+    <!-- История -->
+    <section id="history" class="page hidden">
+      <div class="section-title">История</div>
+      <div id="historyList" class="results"></div>
+    </section>
+
+    <!-- Полноэкранный «сканер» -->
+    <div id="analyzeScreen" class="analyze hidden">
+      <div class="scan">
+        <div class="scan-logo">SCANNING TARGET</div>
+        <div class="scan-bars" id="scanBars"></div>
+        <div class="scan-noise" id="scanNoise"></div>
+      </div>
+    </div>
+
+    <!-- Нижняя навигация -->
+    <nav class="bottom">
+      <button data-go="home"><img src="assets/home.svg"/><span>главная</span></button>
+      <button data-go="saved"><img src="assets/saved.svg"/><span>сохранено</span></button>
+      <button data-go="history"><img src="assets/history.svg"/><span>история</span></button>
+    </nav>
+  </div>
+
+  <!-- Модалка карточки -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="modalClose" class="close">×</button>
+      <div id="modalBody"></div>
+      <div class="actions">
+        <button id="btnSave" class="btn">Сохранить</button>
+        <button id="btnGraph" class="btn">Граф связей</button>
+        <button id="btnPDF" class="btn">PDF</button>
+        <button id="btnAnalyze" class="btn">Проанализировать</button>
+        <button id="btnAI" class="btn">ИИ-анализ</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
