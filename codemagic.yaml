@@ -6,7 +6,7 @@ workflows:
         APP_NAME: "P∆"
         BUNDLE_ID: "ru.profiler.pdelta"
       xcode: latest
-      node: 18.20.3
+      node: 20.11.1
     scripts:
       - name: Install deps
         script: |
@@ -15,9 +15,9 @@ workflows:
         script: |
           rm -rf ios/App/public || true
           mkdir -p ios/App/public
-          cp -R www/* ios/App/public/
+          cp -R ./www/* ./ios/App/public/
 
-          # Cоздаем пустой Capacitor config, чтобы Xcode проект собрался
+          # создаём пустой Capacitor config, чтобы Xcode проект собрался
           cat > capacitor.config.json <<'EOF'
           {
             "appId": "ru.profiler.pdelta",
